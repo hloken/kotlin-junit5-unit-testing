@@ -1,20 +1,33 @@
+@file:Suppress("PropertyName")
+
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+val kluent_version: String by project
+val junit_version: String by project
+val mockk_version: String by project
+
 plugins {
-    java
     kotlin("jvm") version "1.3.71"
     idea
     eclipse
+    java
+    application
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
+
+//    testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:$junit_version")
+    testImplementation("org.amshove.kluent:kluent:$kluent_version")
+    testImplementation("io.mockk:mockk:$mockk_version")
 }
 
 configure<JavaPluginConvention> {
