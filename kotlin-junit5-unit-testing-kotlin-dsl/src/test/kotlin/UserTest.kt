@@ -1,3 +1,5 @@
+package com.rocksolidknowledge.stackunderflow
+
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
@@ -6,14 +8,14 @@ class UserTest {
     private val user = User(1, "Alice")
 
     @Test
-    fun shouldBeAbleToIncreaseReputation() {
+    fun `should be able to increase reputation`() {
         user.changeReputation(10)
 
         Assertions.assertEquals(10, user.reputation)
     }
 
     @Test
-    fun shouldBeAbleToDecreaseReputation() {
+    fun `should be able to decrease reputation`() {
         user.changeReputation(10)
         user.changeReputation(-5)
 

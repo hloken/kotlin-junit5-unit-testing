@@ -1,7 +1,5 @@
 @file:Suppress("PropertyName")
 
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 val kluent_version: String by project
 val junit_version: String by project
 val mockk_version: String by project
@@ -13,8 +11,6 @@ plugins {
     java
     application
 }
-
-
 
 repositories {
     jcenter()
