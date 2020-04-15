@@ -1,4 +1,4 @@
-@file:Suppress("PropertyName")
+@file:Suppress("PropertyName", "Typo")
 
 val kluent_version: String by project
 val junit_version: String by project
@@ -20,7 +20,6 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 
-//    testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
     testImplementation("org.junit.jupiter:junit-jupiter:$junit_version")
     testImplementation("org.amshove.kluent:kluent:$kluent_version")
     testImplementation("io.mockk:mockk:$mockk_version")
